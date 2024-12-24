@@ -1,0 +1,242 @@
+/* General Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    height: 100vh;
+}
+
+/* Heading Styling */
+h1 {
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+    text-decoration: underline;
+    color: #4b0082;
+    font-size: 2rem;
+}
+
+/* Main Container Styling */
+.main-container {
+    width: 50vw; /* Reduced width for compact layout */
+    height: 65vh; /* Slight increase in height for better spacing */
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: #5a189a;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Post Box Styling */
+.post {
+    width: 90%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4b0082;
+}
+
+/* Comment Input Section */
+.comment {
+    display: flex;
+    justify-content: space-between;
+    width: 45vw; /* Adjusted width to match the container */
+    gap: 10px;
+}
+
+.comment input {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.comment input:focus {
+    box-shadow: 0 0 8px rgba(74, 0, 224, 0.5);
+    border-color: #4b0082;
+}
+
+.comment button {
+    padding: 10px 20px;
+    background-color: rgb(140, 140, 133);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.comment button:hover {
+    background-color: rgb(127, 133, 185);
+}
+
+.comment button:active {
+    transform: scale(0.9);
+}
+
+/* Individual Comment Styling */
+.first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    width: 48vw; /* Adjusted width to match container */
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(74, 0, 224, 0.5);
+    border: 1px solid #4b0082;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Button Wrapper Styling */
+.first div {
+    display: flex;
+    gap: 10px;
+}
+
+/* General Button Styles */
+.commentBtn,
+.saveBtn {
+    display: inline-block;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.commentBtn {
+    padding: 10px 20px;
+    background-color: rgb(140, 140, 133);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.commentBtn:hover {
+    background-color: rgb(127, 133, 185);
+}
+
+.commentBtn:active {
+    transform: scale(0.9);
+}
+
+/* Edit Input Styles */
+.editInput {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #4b0082;
+    border-radius: 8px;
+    outline: none;
+    margin-right: 10px;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.editInput:focus {
+    box-shadow: 0 0 8px rgba(74, 0, 224, 0.5);
+    border-color: #4b0082;
+}
+
+/* Save Button Styles */
+.saveBtn {
+    padding: 10px 20px;
+    background-color: #4b0082;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.saveBtn:hover {
+    background-color: #37166b;
+}
+
+.saveBtn:active {
+    transform: scale(0.9);
+}
+
+/* Responsive Design for Medium Screens */
+@media (max-width: 768px) {
+    .main-container {
+        width: 70vw;
+        height: 70vh;
+    }
+
+    .post {
+        width: 95%;
+        height: 60%;
+        font-size: 1.2rem;
+    }
+
+    .comment {
+        width: 65vw;
+    }
+
+    .first {
+        width: 70vw;
+    }
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 480px) {
+    .main-container {
+        width: 85vw;
+        height: 75vh;
+    }
+
+    .post {
+        width: 100%;
+        height: 55%;
+        font-size: 1rem;
+    }
+
+    .comment {
+        width: 80vw;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .comment input,
+    .comment button {
+        width: 100%;
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    .first {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .first div {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
